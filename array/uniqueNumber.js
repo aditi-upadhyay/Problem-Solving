@@ -15,16 +15,11 @@ Explanation: In this array, only element 4 appear once and the other elements ap
 */
 
 function test(arr){
-    console.log("arr", arr);
     let x = new Set();
-    let unique = 0
     for(let i = 0; i < arr.length; i++){
-        console.log(arr[i], unique, x)
         if(!x.has(arr[i])){
-            unique = arr[i]
             x.add(arr[i])
         }else{
-            console.log("exists", arr[i])
             x.delete(arr[i])
         }
     }
